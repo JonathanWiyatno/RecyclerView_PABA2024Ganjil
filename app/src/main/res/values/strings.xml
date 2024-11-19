@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+
+    <string-array name="namaWayang">
+        <item>Bima</item>
+        <item>Arjuna</item>
+        <item>Nakula</item>
+        <item>Sadewa</item>
+        <item>Gatotkaca</item>
+        <item>Semar</item>
+        <item>Gareng</item>
+        <item>Petruk</item>
+        <item>Baladewa</item>
+        <item>Duryodhana</item>
+    </string-array>
+
+    <string-array name="deskripsiWayang">
+        <item>Anak kedua Pandawa yang paling kuat dan gagah berani.</item>
+        <item>Anak ketiga Pandawa yang rupawan dan ahli memanah.</item>
+        <item>Anak keempat Pandawa yang pandai merawat hewan dan mahir dalam ilmu pertarungan.</item>
+        <item>Anak kelima Pandawa yang mahir dalam ilmu pengetahuan dan mampu berkomunikasi dengan binatang.</item>
+        <item>Anak Bima yang sakti dan memiliki kekuatan luar biasa.</item>
+        <item>Guru dan penasihat Pandawa yang bijaksana dan sakti.</item>
+        <item>Adik Semar yang lucu dan suka bercanda.</item>
+        <item>Kakak Semar yang bijaksana dan suka mengkritik.</item>
+        <item>Kakak Bima yang sakti dan memiliki sifat keras kepala.</item>
+        <item>Anak tertua Destarata yang ambisius dan ingin merebut tahta Pandawa.</item>
+    </string-array>
+
+    <string-array name="karakterUtamaWayang">
+        <item>Pandawa</item>
+        <item>Pandawa</item>
+        <item>Pandawa</item>
+        <item>Pandawa</item>
+        <item>Pandawa</item>
+        <item>Punakawan</item>
+        <item>Punakawan</item>
+        <item>Punakawan</item>
+        <item>Kurawa</item>
+        <item>Kurawa</item>
+    </string-array>
+
+    <string-array name="gambarWayang">
+        <item>https://s3-ceph.indoteam.id/chatnews-bucket-production/wp-content/production/uploads/2022/07/21121548/image-43.png</item>
+        <item>https://www.wayangstore.com/wp-content/uploads/2019/07/Instagram_ceritawayang_45796947_192846101658100_3507697142231434355_n.jpg</item>
+        <item>https://www.wayangstore.com/wp-content/uploads/2019/07/Instagram_ceritawayang_46778668_104069470580850_4259656316942649071_n.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/2/26/Sadewa.jpg</item>
+        <item>https://png.pngtree.com/png-clipart/20230411/original/pngtree-wayang-kulit-gatot-kaca-werkudara-traditional-indonesian-javanese-art-png-image_9045855.png</item>
+        <item>https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//84/MTA-1351452/oem_oem-punakawan-semar-wayang-aksesoris-kaca-car-decal-sticker-mobil_full03.jpg</item>
+        <item>https://coretanpetualang.wordpress.com/wp-content/uploads/2010/09/gareng-1.png</item>
+        <item>https://www.shutterstock.com/shutterstock/photos/1346034566/display_1500/stock-vector-petruk-wayang-punakawan-clown-character-indonesian-traditional-shadow-puppet-vector-1346034566.jpg</item>
+        <item>https://www.shutterstock.com/shutterstock/photos/1341605165/display_1500/stock-vector-wayang-baladewa-character-indonesian-traditional-shadow-puppet-vector-illustration-1341605165.jpg</item>
+        <item>https://museum.kemdikbud.go.id/storage//assets/images/museums/13/21352/4373.jpg</item>
+    </string-array>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_det_pahl">detPahl</string>
+
+</resources>
