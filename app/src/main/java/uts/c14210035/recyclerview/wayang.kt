@@ -6,8 +6,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class wayang(
+    var id: Int,
     var foto: String,
     var nama: String,
     var karakter: String,
-    var deskripsi: String
+    var deskripsi: String,
+    var isSaved: Boolean = false
 ):Parcelable

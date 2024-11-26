@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/edit_text_border"
+    android:layout_marginBottom="20dp">
 
     <ImageView
         android:id="@+id/gambarWayang"
@@ -47,6 +49,20 @@
         app:layout_constraintStart_toEndOf="@+id/gambarWayang"
         app:layout_constraintTop_toBottomOf="@+id/karakterWayang" />
 
+    <TextView
+        android:id="@+id/statusSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="10dp"
+        android:text="Status SP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deskripsiWayang"
+        app:layout_constraintVertical_bias="0.0">
+
+    </TextView>
+
     <Button
         android:id="@+id/btnHapus"
         android:layout_width="146dp"
@@ -54,4 +70,12 @@
         android:text="Hapus Data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnFavorit"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
+        android:text="Favorit Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

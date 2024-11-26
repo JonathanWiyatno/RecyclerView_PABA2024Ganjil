@@ -37,6 +37,8 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var _rvWayang : RecyclerView
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -45,13 +47,13 @@ class MainActivity : ComponentActivity() {
 
         sp = getSharedPreferences("dataSP", MODE_PRIVATE)
 
-        val gson =  Gson()
-        val isiSP = sp.getString("spWayang", null)
-        val type = object : TypeToken<ArrayList<wayang>> () {}.type
-
-        if (isiSP!=null) {
-            arWayang = gson.fromJson(isiSP, type)
-        }
+//        val gson =  Gson()
+//        val isiSP = sp.getString("spWayang", null)
+//        val type = object : TypeToken<ArrayList<wayang>> () {}.type
+//
+//        if (isiSP!=null) {
+//            arWayang = gson.fromJson(isiSP, type)
+//        }
 
         _rvWayang = findViewById<RecyclerView>(R.id.rvWayang)
         if (arWayang.size == 0) {
@@ -84,25 +86,56 @@ class MainActivity : ComponentActivity() {
     }
 
     fun TambahData(){
-        val gson = Gson()
-        val editor = sp.edit()
+//        val gson = Gson()
+//        val editor = sp.edit()
         arWayang.clear()
         for (position in _nama.indices){
-            val data = wayang(
-                _gambar[position],
-                _nama[position],
-                _karakter[position],
-                _deskripsi[position]
-            )
 
-            arWayang.add(data)
+            val item = loadItem(position)
+            if (item != null){
+                arWayang.add(item)
+            }
+            else{
+                val data = wayang(
+                    id = position,
+                    _gambar[position],
+                    _nama[position],
+                    _karakter[position],
+                    _deskripsi[position],
+                    isSaved = false
+
+                )
+
+                arWayang.add(data)
+            }
+
 
         }
 
-        val json = gson.toJson(arWayang)
-        editor.putString("spWayang", json)
-        editor.apply()
+//        val json = gson.toJson(arWayang)
+//        editor.putString("spWayang", json)
+//        editor.apply()
 
+    }
+
+    fun saveItem(item: wayang){
+        val gson = Gson()
+        val editor = sp.edit()
+        val json = gson.toJson(item)
+        editor.putString("wayang_${item.id}",json)
+        editor.apply()
+    }
+
+
+
+    fun loadItem(itemId: Int): wayang?{
+        val gson = Gson()
+       val json = sp.getString("wayang_$itemId", null)
+        return if (json != null){
+            gson.fromJson(json, wayang::class.java)
+        }else{
+            null
+        }
     }
 
     fun TampilkanData(){
@@ -146,6 +179,12 @@ class MainActivity : ComponentActivity() {
                             ).show()
                         }
                     ).show()
+            }
+
+            override fun onFavoritClicked(pos: Int, wayang: wayang) {
+                saveItem(wayang)
+                TambahData()
+                TampilkanData()
             }
         })
 

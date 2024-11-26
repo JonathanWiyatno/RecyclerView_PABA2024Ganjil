@@ -23,6 +23,9 @@ class adapterRecView (private val listWayang: ArrayList<wayang>) : RecyclerView.
 
         fun delData(pos:Int)
 
+        fun onFavoritClicked(pos: Int, wayang: wayang)
+
+
 
     }
 
@@ -36,8 +39,10 @@ class adapterRecView (private val listWayang: ArrayList<wayang>) : RecyclerView.
         var _karakterWayang = itemView.findViewById<TextView>(R.id.karakterWayang)
         var _deskripsiWayang = itemView.findViewById<TextView>(R.id.deskripsiWayang)
         var _gambarWayang = itemView.findViewById<ImageView>(R.id.gambarWayang)
+        var _statusSP = itemView.findViewById<TextView>(R.id.statusSP)
 
         var _btnhapus = itemView.findViewById<Button>(R.id.btnHapus)
+        var _btnFavorit = itemView.findViewById<Button>(R.id.btnFavorit)
 
     }
 
@@ -57,12 +62,19 @@ class adapterRecView (private val listWayang: ArrayList<wayang>) : RecyclerView.
         holder._namaWayang.setText(wayang.nama)
         holder._karakterWayang.setText(wayang.karakter)
         holder._deskripsiWayang.setText(wayang.deskripsi)
+        holder._statusSP.text = if (wayang.isSaved) "Saved" else "Not Saved"
         Log.d("TEST", wayang.foto)
         Picasso.get().load(wayang.foto).into(holder._gambarWayang)
 
         holder._gambarWayang.setOnClickListener {
 //            Toast.makeText(holder.itemView.context, wayang.nama, Toast.LENGTH_LONG).show()
             onItemClickCallback.onItemClicked(listWayang[position])
+        }
+
+        holder._btnFavorit.setOnClickListener {
+            wayang.isSaved = !wayang.isSaved
+            holder._statusSP.text = if (wayang.isSaved) "Saved" else "Not Saved"
+            onItemClickCallback.onFavoritClicked(position, wayang)
         }
 
         holder._btnhapus.setOnClickListener{
